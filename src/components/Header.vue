@@ -29,7 +29,7 @@
 <template>
 
 <header class="flex fixed">
-   <div class="start-menu flex">
+   <section class="start-menu flex">
       <div class="categoria">
          <ul class="flex">
             <li v-for="(size, i) in sizesArray" :key= 'i'>
@@ -51,7 +51,7 @@
             </li>
          </ul>
       </div>
-   </div>
+   </section>
 </header>
 
 </template>
