@@ -68,7 +68,7 @@
 header{
    width: 100%;
    height: auto;
-   background-color: rgb( 255, 105, 0);
+   background-color: $bg-header;
    justify-content: center;
    z-index: 1;
    top: 0;
@@ -105,7 +105,7 @@ header{
    margin: 0 8px;
    
    &:hover{
-      color: rgb(206, 206, 206);
+      color: darken($color: $prymary-text-color, $amount: 15%);
    }
 }
 

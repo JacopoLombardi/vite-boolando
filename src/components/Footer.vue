@@ -76,7 +76,7 @@
 
 
 footer{
-   background-color: black;
+   background-color: $bg-footer;
    color: white;
    justify-content: center;
 
