@@ -69,26 +69,24 @@ header{
    width: 100%;
    height: auto;
    background-color: rgb( 255, 105, 0);
-
    justify-content: center;
    z-index: 1;
    top: 0;
-}
 
-.start-menu{
-   width: 1450px;
-   margin: 20px;
-
-   justify-content: space-between;
-   align-items: center;
+   .start-menu{
+      width: 1450px;
+      margin: 20px;
+      justify-content: space-between;
+      align-items: center;
+   }
 }
 
 .categoria .selezione{
    margin: 0 10px;
    font-weight: 600;
    font-size: 18px;
-   color: white;
    text-decoration: none;
+
    &:hover{
       text-decoration: underline;
    }
@@ -96,17 +94,18 @@ header{
 
 .logo{
    width: 200px;
+   
    &:hover{
       cursor: pointer;
    }
 }
 
 .icon-start-menu{
-   color: white;
    font-size: 24px;
    margin: 0 8px;
+   
    &:hover{
-      color: rgb(226, 226, 226);
+      color: rgb(206, 206, 206);
    }
 }
 
