@@ -30,7 +30,7 @@
 
 
 <!-- CSS -->
-<style>
+<style lang="scss" scoped>
 
 h1{
   height: 700px;

@@ -38,6 +38,8 @@ export default {
 
 
 <!-- CSS -->
-<style>
+<style lang="scss">
+
+@use './assets/scss/main.scss';
 
 </style>

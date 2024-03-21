@@ -60,12 +60,16 @@
 
 
 <!-- CSS -->
-<style>
+<style lang="scss" scoped>
+
+@use '../assets/scss/partials/variables' as *;
+
 
 header{
    width: 100%;
    height: auto;
    background-color: rgb( 255, 105, 0);
+
    justify-content: center;
    z-index: 1;
    top: 0;
@@ -73,13 +77,10 @@ header{
 
 .start-menu{
    width: 1450px;
+   margin: 20px;
+
    justify-content: space-between;
    align-items: center;
-   margin: 20px;
-}
-
-ul{
-   list-style: none;
 }
 
 .categoria .selezione{
@@ -88,28 +89,25 @@ ul{
    font-size: 18px;
    color: white;
    text-decoration: none;
-}
-
-.categoria .selezione:hover{
-   text-decoration: underline;
+   &:hover{
+      text-decoration: underline;
+   }
 }
 
 .logo{
-   width: 150px;
-}
-
-.logo:hover{
-   cursor: pointer;
+   width: 200px;
+   &:hover{
+      cursor: pointer;
+   }
 }
 
 .icon-start-menu{
    color: white;
    font-size: 24px;
    margin: 0 8px;
-}
-
-.icon-start-menu:hover{
-   color: rgb(226, 226, 226);
+   &:hover{
+      color: rgb(226, 226, 226);
+   }
 }
 
 </style>
