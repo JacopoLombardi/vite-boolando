@@ -72,19 +72,19 @@
 
 
 main{
-  background-color: aqua;
   margin-top: 88px;
   justify-content: center;
+
+  section{
+    margin-top: 50px;
+    width: 75%;
+    height: auto;
+    
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-content: space-evenly;
+  }
 }
 
-section{
-  background-color: beige;
-  margin-top: 50px;
-  width: 75%;
-  height: auto;
-  flex-wrap: wrap;
-  justify-content: center;
-  justify-content: space-evenly;
-}
 
 </style>

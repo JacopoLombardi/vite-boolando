@@ -81,7 +81,7 @@
                Sostenibile
             </div>
          
-            
+
          </div>
 
          <div class="under">
@@ -104,11 +104,12 @@
 @use '../../assets/scss/partials/variables' as *;
 
 
+p{
+   font-size: 18px;
+}
 
 .card{
   width: calc(100% / 3);
-  background-color: aliceblue;
-  border: 1px solid;
   margin-bottom: 70px;
 
   .card-inside{
@@ -116,15 +117,12 @@
   }
 }
 
-p{
-   font-size: 18px;
-}
-
 .price{
-   color: red;
+   color: $danger-color;
    font-weight: 600;
    margin-right: 10px;
 }
+
 
 
 // Heart
@@ -135,43 +133,40 @@ p{
    display: block;
    top: 5%;
    right: 0;
+
+   .cuore{
+      font-size: 45px;
+      justify-content: center;
+
+      &:hover{
+         color: $danger-color;
+         cursor: pointer;
+      }
+   }
+   .red{
+      color: $danger-color;
+   }
 }
 
-.cuore{
-   font-size: 45px;
-   justify-content: center;
-   cursor: pointer;
-}
-
-.red{
-   color: red;
-}
-
-.cuore:hover{
-   color: red;
-}
 
 
-// Tag
+// Badges
 .sconto{
-   color: $prymary-text-color;
-   font-weight: 600;
-   text-align: center;
    background-color: $danger-color;
-   padding: 5px;
-   width: 60px;
-   bottom: 8%;
 }
 
 .sostenibile{
+   background-color: $safe-color;
+   left: 15%;
+}
+
+.sconto,
+.sostenibile{
    color: $prymary-text-color;
    font-weight: 600;
+   padding: 5px 10px;
    text-align: center;
-   background-color: $safe-color;
-   padding: 5px;
-   width: 100px;
    bottom: 8%;
-   left: 14%;
 }
 
 </style>
