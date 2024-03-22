@@ -4,6 +4,15 @@
 <script>
 
   export default {
+
+   props:{
+      image: String,
+      brand: String,
+      name: String,
+      price: String,
+      priceWithoutDiscount: String
+   },
+
     data(){
       return{
         
@@ -22,30 +31,25 @@
 <!-- HTML -->
 <template>
   
-  <section class="flex">
-
    <div class="card">
       <div class="card-inside">
 
          <div class="upper">
-            <img src="../../assets/img/1.webp" alt="">
+            <img :src="image" alt="">
          </div>
 
          <div class="under">
-            <p>asas</p>
-            <h2>ads</h2>
+            <p>{{ brand }}</p>
+            <h2>{{ name }}</h2>
 
             <div class="flex">
-               <p class="price">a</p>
+               <p class="price">{{ price }} &euro;</p>
                <p>b</p>
             </div>
          </div>
 
       </div>
    </div>
-
-
-</section>
 
 </template>
 
@@ -55,22 +59,14 @@
 <!-- CSS -->
 <style lang="scss" scoped>
 
+@use '../../assets/scss/partials/variables';
 
 
-section{
-  background-color: beige;
-  margin-top: 50px;
-  width: 75%;
-  height: auto;
-  flex-wrap: wrap;
-  justify-content: center;
-  justify-content: space-evenly;
-}
 
 .card{
   width: calc(100% / 3);
-  height: 730px;
   background-color: aliceblue;
+  height: 730px;
   border: 1px solid;
   margin-bottom: 70px;
 
@@ -88,6 +84,5 @@ p{
    font-weight: 600;
    margin-right: 10px;
 }
-
 
 </style>

@@ -25,7 +25,7 @@
     },
 
     mounted(){
-      console.log(objectCard)
+      console.log(this.objectCard.products[0].frontImage)
     }
   };
 </script>
@@ -36,9 +36,19 @@
 <template>
   
   <main class="flex">
+    <section class="flex">
     
-    <Card />
+      <Card
+        v-for="(item, i) in objectCard.products"
+        :key="i"
+        :image="``"
+        :brand="item.brand"
+        :name="item.name"
+        :price="item.price"
+        
+      />
 
+    </section>
   </main>
   
 </template>
@@ -55,8 +65,17 @@
 main{
   background-color: aqua;
   margin-top: 88px;
-  height: 800px;
   justify-content: center;
+}
+
+section{
+  background-color: beige;
+  margin-top: 50px;
+  width: 75%;
+  height: auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-content: space-evenly;
 }
 
 </style>
