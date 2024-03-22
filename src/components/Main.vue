@@ -36,19 +36,9 @@
 <template>
   
   <main class="flex">
-    <section class="flex">
+    
+    <Card />
 
-      <div class="card">
-        <div class="card-inside">
-
-
-          
-
-        </div>
-      </div>
-
-
-    </section>
   </main>
   
 </template>
@@ -67,28 +57,6 @@ main{
   margin-top: 88px;
   height: 800px;
   justify-content: center;
-}
-
-section{
-  background-color: beige;
-  margin-top: 50px;
-  width: 75%;
-  height: auto;
-  flex-wrap: wrap;
-  justify-content: center;
-  justify-content: space-evenly;
-}
-
-.card{
-  width: calc(100% / 3);
-  height: 500px;
-  background-color: aliceblue;
-  border: 1px solid;
-  margin-bottom: 70px;
-
-  .card-inside{
-    padding: 20px;
-  }
 }
 
 </style>

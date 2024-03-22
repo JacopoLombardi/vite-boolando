@@ -12,6 +12,10 @@ body{
    font-family: $font;
 }
 
+img{
+   max-width: 100%;
+}
+
 .flex{
    display: flex;
 }
