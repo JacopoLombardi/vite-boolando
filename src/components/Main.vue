@@ -41,7 +41,7 @@
       <Card
         v-for="(item, i) in objectCard.products"
         :key="i"
-        
+
         :imageShowed="`src/assets/img/${item.frontImage}`"
         :imageHidden="`src/assets/img/${item.backImage}`"
 
@@ -51,9 +51,10 @@
 
         :isInFavorites="item.isInFavorites"
 
-        :badgesRedValue="item.badges"
+        :badgesRedValue="item.badges[item.badges.length - 1].value"
         :badgesGreenValue="item.badges[0].value"
-        
+
+
       />
 
     </section>

@@ -24,7 +24,7 @@
 
     data(){
       return{
-        
+         
       }
     },
 
@@ -46,6 +46,7 @@
          <div class="upper  relative">
             <div
                @mouseover="x = true"
+               @mouseleave="x = false"
             >
                <img 
                   :class="x === true ? 'd-none' : ''" 
@@ -67,13 +68,20 @@
                </span>
             </div>
 
-            <div class="sconto absolute">{{  }}</div>
+
+            <div 
+               :class="badgesRedValue === 'Sostenibilità' ? 'd-none' : ''"
+               class="sconto absolute">
+               {{ badgesRedValue }}
+            </div>
 
             <div 
                v-if="badgesGreenValue === 'Sostenibilità'"
                class="sostenibile absolute">
                Sostenibile
             </div>
+         
+            
          </div>
 
          <div class="under">
@@ -147,7 +155,7 @@ p{
 // Tag
 .sconto{
    color: $prymary-text-color;
-   font-weight: 500;
+   font-weight: 600;
    text-align: center;
    background-color: $danger-color;
    padding: 5px;
