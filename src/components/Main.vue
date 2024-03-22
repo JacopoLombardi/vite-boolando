@@ -23,10 +23,6 @@
     methods:{
 
     },
-
-    mounted(){
-      console.log(this.objectCard.products[0].frontImage)
-    }
   };
 </script>
 
@@ -41,11 +37,10 @@
       <Card
         v-for="(item, i) in objectCard.products"
         :key="i"
-        :image="``"
+        :image="`src/assets/img/${item.frontImage}`"
         :brand="item.brand"
         :name="item.name"
         :price="item.price"
-        
       />
 
     </section>
