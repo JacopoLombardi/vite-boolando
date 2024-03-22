@@ -6,11 +6,20 @@
   export default {
 
    props:{
-      image: String,
+      imageShowed: Image,
+      imageHidden: Image,
+
       brand: String,
       name: String,
       price: Number,
-      priceWithoutDiscount: String
+      
+      isInFavorites: Boolean,
+
+      badgesRedType: String,
+      badgesRedValue: String,
+
+      badgesGreenType: String,
+      badgesGreenValue: String
    },
 
     data(){
@@ -18,6 +27,10 @@
         
       }
     },
+
+    mounted(){
+      
+    }
 
    }
 </script>
@@ -31,22 +44,42 @@
       <div class="card-inside">
 
          <div class="upper  relative">
-            <div>
-               <img :src="image" :alt="brand">
+            <div
+               @mouseover="x = true"
+            >
+               <img 
+                  :class="x === true ? 'd-none' : ''" 
+                  :src="imageShowed" 
+                  :alt="brand">
+
+               <img 
+                  :class="x === true ? 'd-inline-block' : 'd-none'" 
+                  :src="imageHidden" 
+                  :alt="brand"
+               >
             </div>
 
             <div class="scatola-cuore absolute flex">
-               <span class="cuore flex">&hearts;</span>
+               <span 
+                  :class="{'red': isInFavorites === true}" 
+                  class="cuore flex">
+                  &hearts;
+               </span>
+            </div>
+
+            <div class="sconto absolute">{{  }}</div>
+
+            <div 
+               v-if="badgesGreenValue === 'Sostenibilità'"
+               class="sostenibile absolute">
+               Sostenibile
             </div>
          </div>
 
          <div class="under">
             <p>{{ brand }}</p>
             <h2>{{ name }}</h2>
-
-            <div>
-               <p class="price">{{ price }} &euro;</p>
-            </div>
+            <p class="price">{{ price }} &euro;</p>
          </div>
 
       </div>
@@ -60,7 +93,7 @@
 <!-- CSS -->
 <style lang="scss" scoped>
 
-@use '../../assets/scss/partials/variables';
+@use '../../assets/scss/partials/variables' as *;
 
 
 
@@ -86,6 +119,7 @@ p{
 }
 
 
+// Heart
 .scatola-cuore{
    width: 60px;
    height: 60px;
@@ -98,10 +132,38 @@ p{
 .cuore{
    font-size: 45px;
    justify-content: center;
+   cursor: pointer;
+}
+
+.red{
+   color: red;
 }
 
 .cuore:hover{
    color: red;
+}
+
+
+// Tag
+.sconto{
+   color: $prymary-text-color;
+   font-weight: 500;
+   text-align: center;
+   background-color: $danger-color;
+   padding: 5px;
+   width: 60px;
+   bottom: 8%;
+}
+
+.sostenibile{
+   color: $prymary-text-color;
+   font-weight: 600;
+   text-align: center;
+   background-color: $safe-color;
+   padding: 5px;
+   width: 100px;
+   bottom: 8%;
+   left: 14%;
 }
 
 </style>

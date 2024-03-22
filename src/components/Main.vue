@@ -23,6 +23,10 @@
     methods:{
 
     },
+
+    mounted(){
+      
+    }
   };
 </script>
 
@@ -37,10 +41,19 @@
       <Card
         v-for="(item, i) in objectCard.products"
         :key="i"
-        :image="`src/assets/img/${item.frontImage}`"
+        
+        :imageShowed="`src/assets/img/${item.frontImage}`"
+        :imageHidden="`src/assets/img/${item.backImage}`"
+
         :brand="item.brand"
         :name="item.name"
         :price="item.price"
+
+        :isInFavorites="item.isInFavorites"
+
+        :badgesRedValue="item.badges"
+        :badgesGreenValue="item.badges[0].value"
+        
       />
 
     </section>
