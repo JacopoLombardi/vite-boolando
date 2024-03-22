@@ -5,8 +5,13 @@
   export default {
     data(){
       return{
-        sizesArray:['Donna', 'Uomo', 'Bambino'],
-        iconArray:[
+        sizesArray: [
+         'Donna',
+         'Uomo', 
+         'Bambino'
+         ],
+
+        iconArray: [
          'icon-start-menu  fa-regular  fa-user', 
          'icon-start-menu  fa-regular  fa-heart', 
          'icon-start-menu  fa-solid  fa-bag-shopping  icon-white'
